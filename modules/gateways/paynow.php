@@ -107,7 +107,7 @@ function paynow_link($params)
         $amount = $amount,
         $additionalInfo = $description,
         $returnUrl = $returnUrl,
-        $resultUrl = $returnUrl
+        $resultUrl = $resultUrl
     );
 
     return "<div><a class='btn btn-primary' href='".$transaction->browserurl."'>" . $langPayNow . "</a></div>";
