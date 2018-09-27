@@ -103,11 +103,11 @@ function paynow_link($params)
     $resultUrl = $systemUrl . '/modules/gateways/callback/' . $moduleName . '.php';
 
     $transaction = $paynow->initiatePayment(
-        $reference = $invoiceId,
-        $amount = $amount,
-        $additionalInfo = $description,
-        $returnUrl = $returnUrl,
-        $resultUrl = $resultUrl
+        $invoiceId,
+        $amount,
+        $description,
+        $returnUrl,
+        $resultUrl
     );
 
     return "<div><a class='btn btn-primary' href='".$transaction->browserurl."'>" . $langPayNow . "</a></div>";
